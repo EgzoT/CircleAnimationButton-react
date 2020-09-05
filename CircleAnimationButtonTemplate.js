@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 const styleTemplate = {
     container: {},
     containerHover: {},
@@ -9,17 +7,14 @@ const styleTemplate = {
     textContainer: {},
     textContainerHover: {},
     text: {},
-    textHover: {},
-    iconStyle: {},
-
-    icon: false
+    textHover: {}
 }
 
 class CircleAnimationButtonTemplate extends React.Component {
     constructor(props) {
         super(props);
 
-        this.fullStyle = Object.assign(styleTemplate, this.props.fullStyle);
+        this.fullStyle = this.assignStyle(this.props.fullStyle); //Object.assign(styleTemplate, this.props.fullStyle);
         this.alwaysVisibleText = this.isMobileDevice() || this.props.alwaysVisibleText;
 
         this.height = this.props.height ? this.props.height : 35;
@@ -35,6 +30,13 @@ class CircleAnimationButtonTemplate extends React.Component {
         this.state = {
             hover: this.alwaysVisibleText ? true : false
         };
+    }
+
+    assignStyle = (newStyle) => {
+        let style = Object.assign({}, styleTemplate);
+        Object.assign(style, newStyle);
+
+        return style;
     }
 
     mouseEnter = () => {
@@ -183,16 +185,6 @@ class CircleAnimationButtonTemplate extends React.Component {
         return style;
     }
 
-    iconStyle = () => {
-        let style = {
-            margin: 'auto'
-        }
-
-        style = { ...style, ...this.fullStyle['iconStyle'] };
-
-        return style;
-    }
-
     render() {
         return (
             <div
@@ -207,10 +199,7 @@ class CircleAnimationButtonTemplate extends React.Component {
                 </div>
                 : null }
                 <div style={ this.circleContainerStyle() }>
-                    { !this.fullStyle.icon ?
-                    <FontAwesomeIcon style={ this.iconStyle() } icon={ this.props.icon } />
-                    : this.fullStyle.icon
-                    }
+                    { this.props.icon }
                 </div>
                 { this.direction === 0 ?
                 <div style={ !this.state.hover ? this.textContainerStyle() : this.textContainerHoverStyle() }>

@@ -30,12 +30,24 @@ or
 import CircleAnimationButtonTemplate from './PATH/CircleAnimationButtonTemplate';
 ```
 
-JSX Component:
+# Additional for use Font Awesome icons
+
+```jsx
+import IconFA from './PATH/CircleAnimationButton-react/IconFA';
+```
+
+## And import icons
+
+```jsx
+import { faSyncAlt, faStop, faCheck, faPause } from "@fortawesome/free-solid-svg-icons";
+```
+
+# JSX Component:
 
 ```jsx
 <CircleAnimationButton
     color={ "deepSea" }
-    icon={ faSyncAlt }
+    icon={ <IconFA icon={ faSyncAlt }/> }
     text={ "Refresh" }
     onClick={ this.refresh }
 />
@@ -59,7 +71,7 @@ JSX Component:
     style={{ margin: 'auto' }}                  // {} | Set style for container only (fast styling)
     fullStyle={ style }                         // {} | Set full button styling (more info in Example (jsx styling))
     text={ "Test" }                             // "" | Button text
-    icon={ faSyncAlt }                          // null | Font awesome icon
+    icon={ <IconFA icon={ faSyncAlt }/> }       // null | Icon component <IconFA/> or own component
     onClick={ () => { console.log('Click') } }  // null | onClick function
 />
 ```
@@ -110,10 +122,7 @@ const styleTemplate = {
     textContainer: {},
     textContainerHover: {},
     text: {},
-    textHover: {},
-    iconStyle: {},
-
-    icon: false
+    textHover: {}
 }
 ```
 
@@ -132,12 +141,7 @@ let fullStyle = {
     },
     textHover: {
         fontSize: 5
-    },
-    iconStyle: {
-        color: "#FF0000"
-    },
-
-    icon: <div>Example text</div>
+    }
 }
 ```
 
