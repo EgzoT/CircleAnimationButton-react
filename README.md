@@ -4,11 +4,11 @@ React animated button component.
 
 # Demo
 
-TODO
+https://egzot.github.io/CircleAnimationButton-react/
 
 # Example usage
 
-TODO
+https://github.com/EgzoT/CircleAnimationButton-react/tree/example
 
 # Usage
 

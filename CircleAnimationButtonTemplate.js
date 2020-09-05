@@ -14,7 +14,7 @@ class CircleAnimationButtonTemplate extends React.Component {
     constructor(props) {
         super(props);
 
-        this.fullStyle = this.assignStyle(this.props.fullStyle); //Object.assign(styleTemplate, this.props.fullStyle);
+        this.fullStyle = this.assignStyle(this.props.fullStyle);
         this.alwaysVisibleText = this.isMobileDevice() || this.props.alwaysVisibleText;
 
         this.height = this.props.height ? this.props.height : 35;
