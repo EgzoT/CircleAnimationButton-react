@@ -1,152 +1,74 @@
-# Circle Animation Button
+# Example for **CircleAnimationButton-react**
 
-React animated button component.
+Put folder **CircleAnimationButton-react** from *CircleAnimationButton-react* **master** from repo to ./src .
 
-# Demo
+# Create React App
 
-TODO
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Example usage
+## Available Scripts
 
-TODO
+In the project directory, you can run:
 
-# Usage
+### `npm start`
 
-Paste component folder to project and add:
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```jsx
-import CircleAnimationButton from './PATH/CircleAnimationButton';
-```
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-or
+### `npm test`
 
-```jsx
-import { CircleAnimationButtonDanger, CircleAnimationButtonSuccess, CircleAnimationButtonWarning, CircleAnimationButtonPrimary, CircleAnimationButtonDark, CircleAnimationButtonLight, CircleAnimationButtonInfo } from './PATH/CircleAnimationButtons';
-```
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-or
+### `npm run build`
 
-```jsx
-import CircleAnimationButtonTemplate from './PATH/CircleAnimationButtonTemplate';
-```
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-# Additional for use Font Awesome icons
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-```jsx
-import IconFA from './PATH/CircleAnimationButton-react/IconFA';
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## And import icons
+### `npm run eject`
 
-```jsx
-import { faSyncAlt, faStop, faCheck, faPause } from "@fortawesome/free-solid-svg-icons";
-```
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-# JSX Component:
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```jsx
-<CircleAnimationButton
-    color={ "deepSea" }
-    icon={ <IconFA icon={ faSyncAlt }/> }
-    text={ "Refresh" }
-    onClick={ this.refresh }
-/>
-```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-# Options
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-```jsx
-<CircleAnimationButton
-    height={ 40 }                               // 35 | Set height
-    width={ 120 }                               // 105 | Set width
-    autoWidth={ true }                          // false | Set auto width, this action prevent animation (css don't work with auto size), recommended when use alwaysVisibleText={ true }
-    borderColor={ "#000000" }                   // "#787875" | Border color
-    containerColor={ "#424242" }                // "#424241" | Container background color
-    animationTime={ 2 }                         // 1 | Animation speed (seconds)
-    linearGradient={ "0deg, #FF0000, #FF00FF" } // "0deg, #424241, #333332" | Icon background (circle) linear gradient color
-    iconColor={ "#FF0000" }                     // "#FFFFFF" | Icon color
-    textColor={ "#FF0000" }                     // "#FFFFFF" | Text color
-    direction={ "left" }                        // "right" | Button text expanded direction
-    alwaysVisibleText={ true }                  // false | Expand the button
-    style={{ margin: 'auto' }}                  // {} | Set style for container only (fast styling)
-    fullStyle={ style }                         // {} | Set full button styling (more info in Example (jsx styling))
-    text={ "Test" }                             // "" | Button text
-    icon={ <IconFA icon={ faSyncAlt }/> }       // null | Icon component <IconFA/> or own component
-    onClick={ () => { console.log('Click') } }  // null | onClick function
-/>
-```
+## Learn More
 
-Additional styles for CircleAnimationButton (self invented) colors names
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```jsx
-<CircleAnimationButton
-    color={ "steelPurple" }                     // skyBlue | Color style
-/>
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-(self invented) colors names list
+### Code Splitting
 
-```
-skyBlue
-gray
-coralBlue
-deepSea
-steelPurple
-springForest
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-How to add custom color
+### Analyzing the Bundle Size
 
-```jsx
-<CircleAnimationButtonTemplate
-    borderColor={ "#2D6B30" }
-    containerColor={ "#43A047" }
-    gradientColor={ "#58D15E" }
-    textColor={ "#000000" }
-/>
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-Example load font awesome icon
+### Making a Progressive Web App
 
-```jsx
-import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-# Styling
+### Advanced Configuration
 
-```jsx
-const styleTemplate = {
-    container: {},
-    containerHover: {},
-    circleContainer: {},
-    textContainer: {},
-    textContainerHover: {},
-    text: {},
-    textHover: {}
-}
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-Example (jsx styling):
+### Deployment
 
-```jsx
-let fullStyle = {
-    container: {
-        backgroundColor: "#000000"
-    },
-    containerHover: {
-        backgroundColor: "#FFFFFF"
-    },
-    text: {
-        fontSize: 15
-    },
-    textHover: {
-        fontSize: 5
-    }
-}
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-Put to component:
+### `npm run build` fails to minify
 
-```jsx
-fullStyle={ style } //Default: {}
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
