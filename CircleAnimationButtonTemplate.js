@@ -152,6 +152,7 @@ class CircleAnimationButtonTemplate extends React.Component {
             opacity: 0,
             userSelect: 'none',
             color: this.textColor,
+            whiteSpace: 'nowrap',
             transition: "visibility " + this.animationTime / 2 + "s, opacity " + this.animationTime / 2 + "s"
         }
 
@@ -173,6 +174,7 @@ class CircleAnimationButtonTemplate extends React.Component {
             opacity: 1.0,
             userSelect: 'none',
             color: this.textColor,
+            whiteSpace: 'nowrap',
             transition: "visibility 0s, opacity " + this.animationTime * 2 + "s"
         }
 
