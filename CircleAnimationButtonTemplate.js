@@ -69,11 +69,11 @@ class CircleAnimationButtonTemplate extends React.Component {
             transition: "width " + this.animationTime + "s"
         }
 
+        style = { ...style, ...this.fullStyle['container'] };
+
         if (this.props.style) {
             style = { ...style, ...this.props.style }
         }
-
-        style = { ...style, ...this.fullStyle['container'] };
 
         return style;
     }
@@ -91,11 +91,11 @@ class CircleAnimationButtonTemplate extends React.Component {
             transition: "width " + this.animationTime + "s"
         }
 
+        style = { ...style, ...this.fullStyle['containerHover'] };
+
         if (this.props.style) {
             style = { ...style, ...this.props.style }
         }
-
-        style = { ...style, ...this.fullStyle['containerHover'] };
 
         return style;
     }
