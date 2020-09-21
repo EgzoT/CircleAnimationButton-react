@@ -120,6 +120,7 @@ class CircleAnimationButtonTemplate extends React.Component {
     textContainerStyle = () => {
         let style = {
             display: 'flex',
+            overflow: 'hidden',
             height: this.height,
             width: 0,
             transition: "width " + this.animationTime + "s"
@@ -133,6 +134,7 @@ class CircleAnimationButtonTemplate extends React.Component {
     textContainerHoverStyle = () => {
         let style = {
             display: 'flex',
+            overflow: 'hidden',
             height: this.height,
             width: this.props.autoWidth ? 'calc(100% - ' + this.height + 'px)' : this.width - this.height,
             transition: "width " + this.animationTime + "s"
